@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Password Generator</h1>
+        </div>
+        <div class="pw-filed">
+            <p id="pw">Try it </p>
+            <i class="fas fa-clipboard-check" id="copy"></i>
+        </div>
+        <div class="inputs">
+            <div class="inputs-control">
+                <label for="length">Password length</label>
+                <input type="number" id="length" min="5" max="16">
+            </div>
+            <div class="inputs-control">
+                <label for="upper">Include uppercase letters</label>
+                <input type="checkbox" name="" id="upper">
+            </div>
+            <div class="inputs-control">
+                <label for="lower">Include lowercase letters</label>
+                <input type="checkbox" name="" id="lower">
+            </div>
+            <div class="inputs-control">
+                <label for="numbers">Include numbers</label>
+                <input type="checkbox" name="" id="numbers">
+            </div>
+            <div class="inputs-control">
+                <label for="symbol">Include symbols</label>
+                <input type="checkbox" name="" id="symbol">
+            </div>
+        </div>
+        <div class="g-btn">
+            <button id="gBtn">Generate Password</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
