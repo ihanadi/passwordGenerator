@@ -43,7 +43,7 @@ body{
     position: absolute;
     right: 15px;
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 .pw-filed i:active{
     transform: translateY(-50%);

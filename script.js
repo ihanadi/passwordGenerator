@@ -12,7 +12,7 @@ const lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
 const numbers = '0123456789';
 const symbols = '!@#$%^&*()_+=';
 
-
+// Get random objects from letters, numbers, and symbols 
 function getLowercase(){
     return lowerLetters[Math.floor(Math.random() * lowerLetters.length)]
 }
@@ -26,6 +26,7 @@ function getSymbol(){
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
 
+//
 function generatePassword(){
     const len = lengthEl.value;
 
@@ -35,7 +36,7 @@ function generatePassword(){
         const x = genarateX();
         password += x;
     }
-    pwEl.innerHTML = password;
+    pwEl.innerText = password;
 
 }
 
@@ -63,3 +64,17 @@ function genarateX(){
 
 gBtnEl.addEventListener('click',generatePassword);
 
+
+copyEl.addEventListener('click',()=>{
+    const textarea = document.createElement('textarea');
+    const password = pwEl.innerText;
+
+    if(!password) return;
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+
+})
